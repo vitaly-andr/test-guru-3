@@ -20,5 +20,6 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+  Чтобы запустить production локально RAILS_ENV=production_local ./bin/render-build.sh
 
 * ...

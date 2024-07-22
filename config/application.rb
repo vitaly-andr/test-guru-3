@@ -10,6 +10,10 @@ module TestGuru3
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
+    config.hosts << 'localhost'
+    config.hosts << '0.0.0.0'
+    config.hosts << 'test-guru.andrianoff.online'
+    config.hosts << 'test-guru-anr9.onrender.com'
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
