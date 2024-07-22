@@ -68,4 +68,4 @@ end
 
 
 gem 'pg'
-
+gem 'cssbundling-rails'
