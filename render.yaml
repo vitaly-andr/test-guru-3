@@ -1,0 +1,32 @@
+# Exported from Render on 2024-07-22T17:51:07Z
+databases:
+  - name: test-guru3
+    databaseName: test_guru_production_y9oo
+    user: test_guru_production_y9oo_user
+    plan: free
+    region: frankfurt
+    ipAllowList:
+      - source: 0.0.0.0/0
+        description: everywhere
+    postgresMajorVersion: "16"
+services:
+  - type: web
+    name: test-guru-3
+    runtime: ruby
+    repo: https://github.com/vitaly-andr/test-guru-3
+    branch: CSS-Bulma
+    plan: free
+    envVars:
+      - key: POSTMARK_API_TOKEN
+        sync: false
+      - key: GITHUB_GIST_TOKEN
+        sync: false
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: WEB_CONCURRENCY
+        sync: false
+    region: frankfurt
+    buildCommand: bundle install; yarn build:css; bin/rails assets:precompile;
+    startCommand: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}
+    autoDeploy: false
+version: "1"

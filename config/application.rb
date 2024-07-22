@@ -13,7 +13,7 @@ module TestGuru3
     config.hosts << 'localhost'
     config.hosts << '0.0.0.0'
     config.hosts << 'test-guru.andrianoff.online'
-    config.hosts << 'test-guru-anr9.onrender.com'
+    config.hosts << 'test-guru-3.onrender.com'
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
